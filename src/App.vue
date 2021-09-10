@@ -1,19 +1,19 @@
 <template>
   <div id="app">
     <Sidebar />
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Home msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Home from './components/Home.vue'
 import Sidebar from './components/Sidebar.vue'
 
 export default {
   name: 'App',
   components: {
     Sidebar,
-    HelloWorld
+    Home
   }
 }
 </script>
