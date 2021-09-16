@@ -1,6 +1,6 @@
 <template>
   <div class="cards" style="margin-left: 10%">
-    <vs-card type="2">
+    <vs-card type="2" >
       <template #title>
         <h3>Mood Booster</h3>
       </template>
@@ -100,10 +100,23 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  }, 
+  created() {
+    this.getAccessTokenSpotify();
+  },
+  methods: {
+    getAccessTokenSpotify() {
+      const data = axios.get('https://accounts.spotify.com/authorize?client_id=044ec1c876b64e7f94927dc6365f810b&response_type=code&redirect_uri=https%3A%2F%2Fgoogle.co.uk');
+      const result = data;
+      console.log(data);
+      return result;
+    } 
   }
 }
 </script>
